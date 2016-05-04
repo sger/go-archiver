@@ -5,6 +5,31 @@
 
 Simple Archiving with Golang
 
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/sger/archiver"
+)
+
+func main() {
+
+	err := archiver.GetInstance().Archive("test/files", "test/output/files.zip")
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	err = archiver.GetInstance().Restore("test/output/files.zip", "test/output/restored2")
+
+	if err != nil {
+		fmt.Println(err)
+	}
+}
+```
+
 Author
 -----
 
@@ -16,4 +41,5 @@ __Spiros Gerokostas__
 License
 -----
 
-Go Apns2 is available under the MIT license. See the LICENSE file for more info.
+Archiver is available under the MIT license. See the LICENSE file for more info.
+
