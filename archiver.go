@@ -21,7 +21,7 @@ func (z *Zip) Name() string {
 	return "%d.zip"
 }
 
-// Archive a directory 2 parameters required the source file and the destination
+// Archive a directory 2 parameters (source file and the destination)
 func (z *Zip) Archive(src, dest string) error {
 	// check if directory exists
 	if _, err := os.Stat(src); os.IsNotExist(err) {
@@ -72,7 +72,7 @@ func (z *Zip) Archive(src, dest string) error {
 	})
 }
 
-// Restore a directory with 2 parameters required the source file and the destination
+// Restore a directory with 2 parameters (source file and the destination)
 func (z *Zip) Restore(src, dest string) error {
 	r, err := zip.OpenReader(src)
 
