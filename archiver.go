@@ -72,7 +72,7 @@ func (z *Zip) Archive(src, dest string) error {
 	})
 }
 
-// Restore a directory 2 paramaters required the source file and the destination
+// Restore a directory with 2 parameters required the source file and the destination
 func (z *Zip) Restore(src, dest string) error {
 	r, err := zip.OpenReader(src)
 
