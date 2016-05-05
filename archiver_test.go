@@ -9,21 +9,21 @@ import (
 )
 
 func setup(t *testing.T) {
-	os.MkdirAll("test/output", 0777)
+	os.MkdirAll("src/output", 0777)
 }
 
 func teardown(t *testing.T) {
-	os.RemoveAll("test/output")
+	os.RemoveAll("src/output")
 }
 
 func TestZipArchive(t *testing.T) {
 	setup(t)
 	defer teardown(t)
 
-	err := archiver.GetInstance().Archive("test/files", "test/output/files.zip")
+	err := archiver.GetInstance().Archive("src/go", "src/output/files.zip")
 	require.NoError(t, err)
 
-	err = archiver.GetInstance().Restore("test/output/files.zip", "test/output/restored")
+	err = archiver.GetInstance().Restore("src/output/files.zip", "src/output/restored")
 	require.NoError(t, err)
 }
 

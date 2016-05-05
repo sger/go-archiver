@@ -16,13 +16,14 @@ import (
 
 func main() {
 
-	err := archiver.GetInstance().Archive("test/files", "test/output/files.zip")
+	err := archiver.GetInstance().Archive("src/go", "src/output/files.zip")
 
+    // Throw error if directory don't exists
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	err = archiver.GetInstance().Restore("test/output/files.zip", "test/output/restored2")
+	err = archiver.GetInstance().Restore("src/output/files.zip", "src/output/restored")
 
 	if err != nil {
 		fmt.Println(err)
