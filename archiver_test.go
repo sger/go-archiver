@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/sger/archiver"
+	"github.com/sger/go-archiver"
 	"github.com/stretchr/testify/require"
 )
 
