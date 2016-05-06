@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/sger/podule.svg?branch=master)](https://travis-ci.org/sger/podule)
 [![Coverage Status](https://coveralls.io/repos/github/sger/podule/badge.svg?branch=master)](https://coveralls.io/github/sger/podule?branch=master)
 
-# Archiver
+# Go Archiver
 
 Simple Archiving with Golang
 
@@ -42,5 +42,5 @@ __Spiros Gerokostas__
 License
 -----
 
-Archiver is available under the MIT license. See the LICENSE file for more info.
+Go Archiver is available under the MIT license. See the LICENSE file for more info.
 
